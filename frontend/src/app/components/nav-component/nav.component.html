@@ -1,1 +1,17 @@
-<p>nav works!</p>
+<nav class="navbar navbar-expand navbar-light bg-light d-flex flex-row justify-content-around">
+  <a class="navbar-brand" href="#">my-own-todo-list-app</a>
+  <ul class="navbar-nav d-flex flex-row justify-content-around">
+    <li class="nav-item m-2">
+      <button (click)="onAdd()" type="button" class="btn btn-primary">ADD TASK</button>
+    </li>
+    <li class="nav-item m-2">
+      <button (click)="onEdit()" type="button" class="btn btn-warning">EDIT TASK</button>
+    </li>
+    <li class="nav-item m-2">
+      <button (click)="onDelete()" type="button" class="btn btn-danger">DELETE TASK</button>
+    </li>
+    <li class="nav-item m-2">
+      <button (click)="onView()" type="button" class="btn btn-dark">VIEW TASKS</button>
+    </li>
+  </ul>
+</nav>

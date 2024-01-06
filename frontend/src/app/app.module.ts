@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormDeleteComponent } from './form-delete/form-delete.component';
-import { FormAddComponent } from './form-add/form-add.component';
-import { FormUpdateComponent } from './form-update/form-update.component';
-import { ViewComponent } from './view/view.component';
-import { NavComponent } from './nav/nav.component';
+import { FormDeleteComponent } from './components/form-delete-component/form-delete.component';
+import { FormAddComponent } from './components/form-add-component/form-add.component';
+import { FormUpdateComponent } from './components/form-update-component/form-update.component';
+import { ViewComponent } from './components/view-component/view.component'
+import { NavComponent } from './components/nav-component/nav.component'
 
 @NgModule({
   declarations: [
