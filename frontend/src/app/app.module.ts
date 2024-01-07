@@ -7,7 +7,8 @@ import { FormDeleteComponent } from './components/form-delete-component/form-del
 import { FormAddComponent } from './components/form-add-component/form-add.component';
 import { FormUpdateComponent } from './components/form-update-component/form-update.component';
 import { ViewComponent } from './components/view-component/view.component'
-import { NavComponent } from './components/nav-component/nav.component'
+import { NavComponent } from './components/nav-component/nav.component';
+import { ViewItemComponent } from './components/view-item-component/view-item.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavComponent } from './components/nav-component/nav.component'
     FormAddComponent,
     FormUpdateComponent,
     ViewComponent,
-    NavComponent
+    NavComponent,
+    ViewItemComponent
   ],
   imports: [
     BrowserModule,
