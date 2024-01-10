@@ -6,6 +6,10 @@ import my.own.todoapp.repo.TaskRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 public class TodoappApplication {
@@ -14,6 +18,7 @@ public class TodoappApplication {
 		SpringApplication.run(TodoappApplication.class, args);
 	}
 
+	@Bean
 	CommandLineRunner run(TaskRepository taskRepository) {
 		return args -> {
 			taskRepository.save(new Task(null, "clean the room", "use brush", "2000.11.11 17:15"));

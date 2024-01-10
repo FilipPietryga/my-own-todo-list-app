@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/task")
+@RequestMapping("/task/")
 @RequiredArgsConstructor
 public class TaskController {
     private final TaskServiceImpl taskService;
