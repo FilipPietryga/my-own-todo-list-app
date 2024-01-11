@@ -17,7 +17,7 @@ import java.util.Map;
 public class TaskController {
     private final TaskServiceImpl taskService;
 
-    @GetMapping("/getAll")
+    @GetMapping("/all")
     public ResponseEntity<TaskResponse> getTasks() {
         return ResponseEntity.ok(
                 TaskResponse.builder()
@@ -56,7 +56,7 @@ public class TaskController {
         );
     }
 
-    @PostMapping("/{id}")
+    @PostMapping("/")
     public ResponseEntity<TaskResponse> postTask(@RequestParam("task") Task task) {
         return ResponseEntity.ok(
                 TaskResponse.builder()
@@ -69,7 +69,7 @@ public class TaskController {
         );
     }
 
-    @PutMapping("/{id}")
+    @PutMapping("/")
     public ResponseEntity<TaskResponse> putTask(@RequestParam("task") Task task) {
         return ResponseEntity.ok(
                 TaskResponse.builder()
@@ -82,7 +82,7 @@ public class TaskController {
         );
     }
 
-    @GetMapping("/{limit}")
+    @GetMapping("/some/{limit}")
     public ResponseEntity<TaskResponse> getTask(@PathVariable int limit) {
         return ResponseEntity.ok(
                 TaskResponse.builder()
