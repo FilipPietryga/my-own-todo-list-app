@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Task } from './model/task';
+import { TaskService } from './service/task.service';
+import { Observable } from 'rxjs';
+import { TaskResponse } from './model/taskResponse';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +10,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'frontend';
+  tasks?: Observable<TaskResponse>
+
+  constructor(private taskService: TaskService) {}
 
   ngOnInit(): void {
+    this.tasks = this.taskService.all.
+    pipe(
+      map(response => {
+        return {data}
+      })
+    );
 
   }
 }
